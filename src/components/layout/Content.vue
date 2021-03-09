@@ -1,0 +1,104 @@
+<template>
+  <div id="book-a-car">
+    <booking-form></booking-form>
+  </div>
+  <section id="what-do-area">
+    <what-we-do></what-we-do>
+  </section>
+  <div class="partner-area">
+      <partner-slider></partner-slider>
+  </div>
+  <div class="service-area">
+      <service></service>
+  </div>
+  <div class="funfact">
+      <funfact></funfact>
+  </div>
+</template>
+<script lang="ts">
+import BookingForm from "../booking/Form.vue";
+import WhatWeDo from "../introduce/WhatWeDo.vue";
+import PartnerSlider from '../slider/PartnerSlider.vue';
+import Service from '../introduce/Service.vue';
+import Funfact from '../introduce/Funfact.vue'
+import { defineComponent, ref } from "vue";
+export default defineComponent({
+  components: {
+    BookingForm,
+    WhatWeDo,
+    PartnerSlider,
+    Service,
+    Funfact
+  },
+  setup() {
+    return {
+      selectedKeys1: ref<string[]>(["2"]),
+      selectedKeys2: ref<string[]>(["1"]),
+      collapsed: ref<boolean>(false),
+      openKeys: ref<string[]>(["sub1"]),
+    };
+  },
+});
+</script>
+<style>
+.logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  margin: 16px 24px 16px 0;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.ant-row-rtl .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}
+
+.site-layout-background {
+  background: #fff;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.3) !important;
+}
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+.text-center {
+  text-align: center;
+}
+#what-do-area {
+  padding: 100px 0;
+}
+.section-padding {
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 80px;
+}
+
+.section-title h2 {
+  margin-bottom: 10px;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.section-title p {
+  margin-top: 10px;
+}
+
+.section-title .title-line {
+  color: #ffd000;
+  position: relative;
+}
+</style>
+
