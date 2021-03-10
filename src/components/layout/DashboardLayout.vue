@@ -1,4 +1,6 @@
 <template>
+  <a-layout style="background : #fff">
+    <a-layout-header class="header">
   <a-layout>
     <a-layout-header class="header" collapsible>
       <div class="logo" />
@@ -11,7 +13,6 @@
         <a-menu-item :style="{ backgroundColor: 'transparent' }" key="1"
           >HOME</a-menu-item
         >
-
         <a-menu-item :style="{ backgroundColor: 'transparent' }" key="3"
           ><router-link class="btn btn-primary" :to="'About'">ABOUT</router-link>
         </a-menu-item>
@@ -67,8 +68,7 @@
       <HomeSlider></HomeSlider>
     </section>
 
-    
-    <a-layout style="background:#fff">
+    <a-layout style="background : #fff">
       <Content></Content>
     </a-layout>
   </a-layout>
