@@ -1,5 +1,5 @@
 <template>
-  <a-card hoverable style="width: 300px">
+  <a-card hoverable style="width:100%">
     <template #cover>
       <img
         alt="example"

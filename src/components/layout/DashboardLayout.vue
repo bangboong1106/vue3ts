@@ -1,6 +1,6 @@
 <template>
   <a-layout>
-    <a-layout-header class="header">
+    <a-layout-header class="header" collapsible>
       <div class="logo" />
       <a-menu
         theme="dark"
@@ -68,7 +68,7 @@
     </section>
 
     
-    <a-layout>
+    <a-layout style="background:#fff">
       <Content></Content>
     </a-layout>
   </a-layout>
@@ -138,8 +138,7 @@ export default defineComponent({
   margin-bottom: 80px;
 }
 
-.section-title h2 {
-  margin-bottom: 10px;
+.section-title h3 {
   position: relative;
   text-transform: uppercase;
 }
@@ -151,5 +150,6 @@ export default defineComponent({
 .section-title .title-line {
   color: #ffd000;
   position: relative;
+  font-size: 24px;
 }
 </style>

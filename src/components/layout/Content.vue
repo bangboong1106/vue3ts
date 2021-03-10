@@ -5,7 +5,7 @@
   <section id="what-do-area">
     <what-we-do></what-we-do>
   </section>
-  <div class="partner-area">
+  <div class="partner-area" style="background:#EAEAEA ; padding :20px 50px">
       <partner-slider></partner-slider>
   </div>
   <div class="service-area">

@@ -83,12 +83,7 @@
       </a-row>
     </div>
   </div>
-  <HomeOutlined />
-  <SettingFilled />
-  <SmileOutlined />
-  <SyncOutlined spin />
-  <SmileOutlined :rotate="180" />
-  <LoadingOutlined />
+ 
 </template>
 
 <style scoped>
