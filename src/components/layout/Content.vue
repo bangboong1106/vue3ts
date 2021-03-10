@@ -7,6 +7,9 @@
   </section>
   <div class="partner-area">
     <partner-slider></partner-slider>
+
+  <div class="partner-area" style="background:#EAEAEA ; padding :20px 50px">
+      <partner-slider></partner-slider>
   </div>
   <div class="service-area">
     

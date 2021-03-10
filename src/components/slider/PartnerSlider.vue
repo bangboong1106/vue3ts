@@ -1,5 +1,5 @@
 <template>
-  <a-carousel autoplay dots="false" item="2" :centerMode="true" centerPadding="300px" >
+  <a-carousel autoplay dots="false"  :centerMode="true"  >
     <div class="carousel__item" :style="{'width':'200px!important'}">
       <div class="carousel__imgHolder">
         <img :src="require('./../../assets/img/partner/partner-logo-1.png')" alt="" class="carousel__image">
@@ -42,6 +42,10 @@ export default defineComponent({
  
   vertical-align: middle;
   margin-left: 0;
+}
+.partner-area {
+    background: #EAEAEA;
+    padding: 30px 0;
 }
 
 </style>

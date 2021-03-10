@@ -7,10 +7,10 @@
     }"
   >
     <div class="container">
-      <a-row class="">
+      <a-row class="" >
         <a-col :span="24">
-          <a-row>
-            <a-col :lg="{ span: 8 }" :xs="{ span: 12 }">
+          <a-row :gutter="[16,16]">
+            <a-col :lg="{ span: 8 }" :xs="{ span: 24 }">
               <div class="single-funfact">
                 <div class="funfact-icon"><SmileOutlined /></div>
                 <div class="funfact-content">
@@ -20,7 +20,7 @@
                 </div>
               </div>
             </a-col>
-            <a-col :lg="{ span: 8 }" :xs="{ span: 12 }">
+            <a-col :lg="{ span: 8 }" :xs="{ span: 24 }">
               <div class="single-funfact">
                 <div class="funfact-icon"><CarOutlined /></div>
                 <div class="funfact-content">
@@ -29,7 +29,7 @@
                 </div>
               </div>
             </a-col>
-            <a-col :lg="{ span: 8 }" :xs="{ span: 12 }">
+            <a-col :lg="{ span: 8 }" :xs="{ span: 24 }">
               <div class="single-funfact">
                 <div class="funfact-icon"><HomeOutlined /></div>
                 <div class="funfact-content">
