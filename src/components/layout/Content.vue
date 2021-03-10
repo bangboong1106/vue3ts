@@ -6,21 +6,38 @@
     <what-we-do></what-we-do>
   </section>
   <div class="partner-area">
-      <partner-slider></partner-slider>
+    <partner-slider></partner-slider>
   </div>
   <div class="service-area">
-      <service></service>
+    
+    <service></service>
   </div>
   <div class="funfact">
-      <funfact></funfact>
+    <funfact></funfact>
+  </div>
+  <div class="car-info">
+    
+    <a-row>
+      <a-col :span = "6">
+        <menu-car></menu-car>
+
+      </a-col>
+      <a-col :span = "12">
+          <img :src="require('../../../public/images/car-1.jpg')" style="width:100%;height:auto">
+      </a-col>
+      <a-col :span = "6">
+
+      </a-col>
+    </a-row>
   </div>
 </template>
 <script lang="ts">
 import BookingForm from "../booking/Form.vue";
 import WhatWeDo from "../introduce/WhatWeDo.vue";
-import PartnerSlider from '../slider/PartnerSlider.vue';
-import Service from '../introduce/Service.vue';
-import Funfact from '../introduce/Funfact.vue'
+import PartnerSlider from "../slider/PartnerSlider.vue";
+import Service from "../introduce/Service.vue";
+import Funfact from "../introduce/Funfact.vue";
+import MenuCar from "../listCar/Menu.vue";
 import { defineComponent, ref } from "vue";
 export default defineComponent({
   components: {
@@ -28,7 +45,8 @@ export default defineComponent({
     WhatWeDo,
     PartnerSlider,
     Service,
-    Funfact
+    Funfact,
+    MenuCar,
   },
   setup() {
     return {
@@ -101,4 +119,3 @@ export default defineComponent({
   position: relative;
 }
 </style>
-

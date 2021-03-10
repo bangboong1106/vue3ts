@@ -1,5 +1,5 @@
 <template>
-  <a-layout>
+  <a-layout style="background : #fff">
     <a-layout-header class="header">
       <div class="logo" />
       <a-menu
@@ -68,7 +68,7 @@
     </section>
 
     
-    <a-layout>
+    <a-layout style="background : #fff">
       <Content></Content>
     </a-layout>
   </a-layout>
