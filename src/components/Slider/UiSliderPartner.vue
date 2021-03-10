@@ -32,7 +32,6 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-/* For demo */
 .carousel__item{
   padding: 0 10px;
   

@@ -1,9 +1,5 @@
 <template>
-  <a-layout style="background : #fff">
-    <a-layout-header class="header">
-  <a-layout>
-    <a-layout-header class="header" collapsible>
-      <div class="logo" />
+   <div class="menu-topbav">
       <a-menu
         theme="dark"
         mode="horizontal"
@@ -11,10 +7,14 @@
         :style="{ lineHeight: '64px', backgroundColor: 'transparent' }"
       >
         <a-menu-item :style="{ backgroundColor: 'transparent' }" key="1"
-          >HOME</a-menu-item
+          ><router-link class="btn btn-primary" :to="'home'"
+            >HOME</router-link
+          ></a-menu-item
         >
         <a-menu-item :style="{ backgroundColor: 'transparent' }" key="3"
-          ><router-link class="btn btn-primary" :to="'About'">ABOUT</router-link>
+          ><router-link class="btn btn-primary" :to="'about'"
+            >ABOUT</router-link
+          >
         </a-menu-item>
         <a-menu-item :style="{ backgroundColor: 'transparent' }" key="5"
           >SERVICES</a-menu-item
@@ -63,93 +63,8 @@
           >CONTACT</a-menu-item
         >
       </a-menu>
-    </a-layout-header>
-    <section id="home-slider">
-      <HomeSlider></HomeSlider>
-    </section>
-
-    <a-layout style="background : #fff">
-      <Content></Content>
-    </a-layout>
-  </a-layout>
+   </div>
 </template>
-<script lang="ts">
-import HomeSlider from "../slider/HomeSlider.vue";
-import Content from "./Content.vue";
-import { defineComponent, ref } from "vue";
-export default defineComponent({
-  components: {
-    HomeSlider,
-    Content,
-  },
-  setup() {
-    return {
-      selectedKeys1: ref<string[]>(["2"]),
-      selectedKeys2: ref<string[]>(["1"]),
-      collapsed: ref<boolean>(false),
-      openKeys: ref<string[]>(["sub1"]),
-    };
-  },
-});
-</script>
-<style>
-.logo {
-  float: left;
-  width: 120px;
-  height: 31px;
-  margin: 16px 24px 16px 0;
-  background: rgba(255, 255, 255, 0.3);
-}
-
-.ant-row-rtl .logo {
-  float: right;
-  margin: 16px 0 16px 24px;
-}
-
-.site-layout-background {
-  background: #fff;
-}
-.header {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.3) !important;
-}
-.container {
-  max-width: 1200px;
-  margin: auto;
-}
-.text-center {
-  text-align: center;
-}
-#what-do-area {
-  padding: 100px 0;
-}
-.section-padding {
-  padding: 100px 0;
-}
-
-.section-title {
-  font-size: 15px;
-  font-weight: 300;
-  margin-bottom: 80px;
-}
-
-.section-title h3 {
-  position: relative;
-  text-transform: uppercase;
-}
-
-.section-title p {
-  margin-top: 10px;
-}
-
-.section-title .title-line {
-  color: #ffd000;
-  position: relative;
-  font-size: 24px;
-}
+<style scoped>
+  
 </style>

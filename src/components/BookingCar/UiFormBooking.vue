@@ -74,9 +74,10 @@ export default defineComponent({
   },
 });
 </script>
-<style lang="css" scoped>
+<style  scoped>
 .container{
     max-width: 1200px;
+    
 }
 .book-car{
     background-color: #fff;
@@ -86,7 +87,7 @@ export default defineComponent({
     border-radius:3px;
     box-shadow: 0 0 5px rgb(0 0 0 / 50%);
     position: relative;
-    margin-top:-116px;
+    margin-top:-116px!important;
 }
 @media (max-width: 576px){
   .book-car{

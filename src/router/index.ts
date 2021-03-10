@@ -1,17 +1,35 @@
 import { createWebHistory, createRouter } from "vue-router";
-import DashboardLayout from "../components/layout/DashboardLayout.vue";
+import Index from "../layout/Index.vue";
+import Home from '../pages/Home.vue';
 import HelloWorld from '../components/HelloWorld.vue';
 const routes = [
   {
     path: "/",
-    name: "Home",
-    component: DashboardLayout,
+    component: Index,
+    meta : {
+      auth : true
+    },
+    children :[
+      {
+        path: "home",
+        name: "Trang chủ",
+        component : Home,
+        meta : {
+          auth : true
+        },
+      },
+      {
+        path: "/about",
+        name: "About",
+        component: HelloWorld,
+        meta :{
+          auth : true
+        },
+        
+      },
+    ]
   },
-  {
-    path: "/",
-    name: "About",
-    component: HelloWorld,
-  },
+  
   
 ];
 

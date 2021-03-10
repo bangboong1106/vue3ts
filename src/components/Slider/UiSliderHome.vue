@@ -26,18 +26,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-/* For demo */
-/*.ant-carousel :deep(.slick-slide) {
-  text-align: center;
-  height: 800px;
-  line-height: 800px;
-  background: #364d79;
-  overflow: hidden;
-}
 
-.ant-carousel :deep(.slick-slide h3) {
-  color: #fff;
-} */
 .home-slider-item {
   object-fit: cover;
   height: 700px;

@@ -7,7 +7,7 @@
   </section>
   <div class="partner-area">
     <partner-slider></partner-slider>
-
+  </div>
   <div class="partner-area" style="background:#EAEAEA ; padding :20px 50px">
       <partner-slider></partner-slider>
   </div>
@@ -35,12 +35,12 @@
   </div>
 </template>
 <script lang="ts">
-import BookingForm from "../booking/Form.vue";
-import WhatWeDo from "../introduce/WhatWeDo.vue";
-import PartnerSlider from "../slider/PartnerSlider.vue";
-import Service from "../introduce/Service.vue";
-import Funfact from "../introduce/Funfact.vue";
-import MenuCar from "../listCar/Menu.vue";
+import BookingForm from "../components/booking/Form.vue";
+import WhatWeDo from "../components/introduce/WhatWeDo.vue";
+import PartnerSlider from "../components/slider/PartnerSlider.vue";
+import Service from "../components/introduce/Service.vue";
+import Funfact from "../components/introduce/Funfact.vue";
+import MenuCar from "../components/listCar/Menu.vue";
 import { defineComponent, ref } from "vue";
 export default defineComponent({
   components: {
@@ -78,15 +78,7 @@ export default defineComponent({
 .site-layout-background {
   background: #fff;
 }
-.header {
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-  background: rgba(0, 0, 0, 0.3) !important;
-}
+
 .container {
   max-width: 1200px;
   margin: auto;

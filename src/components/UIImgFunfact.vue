@@ -1,15 +1,15 @@
-<template >
+<template>
   <div
-    class="overlay funfact-area"
+    class="overlay img-funfact"
     :style="{
       'background-image':
-        'url(' + require('../../assets/img/funfact-bg.jpg') + ')',
+        'url(' + require('../assets/img/funfact-bg.jpg') + ')',
     }"
   >
     <div class="container">
-      <a-row class="" >
+      <a-row class="">
         <a-col :span="24">
-          <a-row :gutter="[16,16]">
+          <a-row :gutter="[16, 16]">
             <a-col :lg="{ span: 8 }" :xs="{ span: 24 }">
               <div class="single-funfact">
                 <div class="funfact-icon"><SmileOutlined /></div>
@@ -43,7 +43,6 @@
       </a-row>
     </div>
   </div>
-  
 </template>
 <script lang="ts">
 import {
@@ -61,12 +60,13 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-.funfact-area {
+.img-funfact {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 110px 0;
   color: #fff;
+  padding: 110px 0;
+
 }
 .overlay {
   position: relative;
@@ -102,9 +102,9 @@ export default defineComponent({
   justify-content: center;
 }
 .funfact-icon {
-    font-size: 44px;
-    display: flex;
-    align-items: center;
-    color: #fcfc00;
+  font-size: 44px;
+  display: flex;
+  align-items: center;
+  color: #fcfc00;
 }
 </style>
