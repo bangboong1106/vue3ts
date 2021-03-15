@@ -1,10 +1,12 @@
 import { createWebHistory, createRouter } from "vue-router";
 import Index from "../layout/Index.vue";
 import Home from '../pages/Home.vue';
-import HelloWorld from '../components/HelloWorld.vue';
+import About from '../pages/About/About.vue';
+import BookCar from '../pages/Booking/BookCar.vue';
 const routes = [
   {
     path: "/",
+    redirect: '/home',
     component: Index,
     meta : {
       auth : true
@@ -20,13 +22,23 @@ const routes = [
       },
       {
         path: "/about",
-        name: "About",
-        component: HelloWorld,
+        name: "Tìm hiểu thêm",
+        component: About,
         meta :{
           auth : true
         },
-        
+
       },
+      {
+        path: "/book-car",
+        name: "Đặt xe",
+        component: BookCar,
+        meta :{
+          auth : true
+        },
+
+      },
+
     ]
   },
   

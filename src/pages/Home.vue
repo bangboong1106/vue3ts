@@ -1,6 +1,5 @@
 <template>
   <div class="home-page">
-    <ui-slider-home></ui-slider-home>
     <ui-form-booking></ui-form-booking>
     <div class="what-do-area">
       <ui-title
@@ -65,7 +64,6 @@
 </template>
 <script>
 import { defineComponent } from "vue";
-import UiSliderHome from "../components/Slider/UiSliderHome.vue";
 // import UiSliderPartner from "../components/Slider/UiSliderPartner.vue";
 import UiFormBooking from "../components/BookingCar/UiFormBooking.vue";
 import UiTitle from "../components/UiTitle.vue";
@@ -75,7 +73,6 @@ import UiImgFunfact from "../components/UIImgFunfact.vue";
 import UiMenuListCar from "../components/Menu/UiMenuListCar.vue";
 export default defineComponent({
   components: {
-    UiSliderHome,
     // UiSliderPartner,
     UiFormBooking,
     UiTitle,
