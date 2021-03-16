@@ -74,7 +74,7 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
-// import { Moment } from 'moment';
+import { Moment } from 'moment';
 export default defineComponent({
   setup() {
     // const handleChange = (value: string) => {
@@ -92,8 +92,7 @@ export default defineComponent({
     return {
       value: ref<string | undefined>(undefined),
       filterOption,
-    
-      // startdate: ref<Moment>(),
+      startdate: ref<Moment>()
      
     };
   },

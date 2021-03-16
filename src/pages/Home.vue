@@ -62,7 +62,7 @@
     </div>
   </div>
 </template>
-<script>
+<script lang="ts">
 import { defineComponent } from "vue";
 // import UiSliderPartner from "../components/Slider/UiSliderPartner.vue";
 import UiFormBooking from "../components/BookingCar/UiFormBooking.vue";
