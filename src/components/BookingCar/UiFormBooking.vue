@@ -12,7 +12,7 @@
         <a-select
           v-model:value="value"
           show-search
-          placeholder="Chọn địa điểm"
+          placeholder="Chọn địa điểm nhận"
           option-filter-prop="children"
           class="select"
           :filter-option="filterOption"
@@ -26,41 +26,37 @@
         </a-select>
       </a-col>
       <a-col
-        :lg="{ span: 4, gutter: [32, 32] }"
-        :xs="{ span: 24, gutter: [32, 32] }"
-        :sm="{ span: 12, gutter: [32, 32] }"
-      >
-        <a-space direction="vertical" style="width:100%">
-          <a-date-picker v-model:value="value1" placeholder="Chọn ngày" />
-        </a-space>
-      </a-col>
-      <a-col
-        :lg="{ span: 4, gutter: [32, 32] }"
-        :xs="{ span: 24, gutter: [32, 32] }"
-        :sm="{ span: 12, gutter: [32, 32] }"
-      >
-        <a-space direction="vertical" style="width:100%">
-          <a-date-picker v-model:value="value1" placeholder="Chọn ngày trả" />
-        </a-space>
-      </a-col>
-      <a-col
-        :lg="{ span: 4, gutter: [32, 32] }"
-        :xs="{ span: 24, gutter: [32, 32] }"
-        :sm="{ span: 12, gutter: [32, 32] }"
+        :lg="{ span: 4, gutter: [16, 16] }"
+        :xs="{ span: 24, gutter: [16, 16] }"
+        :sm="{ span: 12, gutter: [16, 16] }"
       >
         <a-select
-          v-model:value="value"
+          v-model:value="value1"
           show-search
-          placeholder="Chọn loại xe"
+          placeholder="Chọn địa điểm trả"
           option-filter-prop="children"
           class="select"
           :filter-option="filterOption"
+          @focus="handleFocus"
+          @blur="handleBlur"
+          @change="handleChange"
         >
-          <a-select-option value="bmw">BMW</a-select-option>
-          <a-select-option value="audi">Audi</a-select-option>
-          <a-select-option value="vinfast">Vinfast</a-select-option>
+          <a-select-option value="30">Hà Nội</a-select-option>
+          <a-select-option value="57">Hồ Chí Minh</a-select-option>
+          <a-select-option value="45">Đà Nẵng</a-select-option>
         </a-select>
       </a-col>
+      <a-col
+        :lg="{ span: 4, gutter: [32, 32] }"
+        :xs="{ span: 24, gutter: [32, 32] }"
+        :sm="{ span: 12, gutter: [32, 32] }"
+      >
+        <a-space direction="vertical" style="width:100%">
+          <a-date-picker v-model:value="startdate" placeholder="Chọn ngày nhận xe" />
+        </a-space>
+      </a-col>
+     
+     
       <a-col
         :lg="{ span: 4, gutter: [16, 16] }"
         :xs="{ span: 24, gutter: [16, 16] }"
@@ -78,26 +74,27 @@
 </template>
 <script lang="ts">
 import { defineComponent, ref } from "vue";
+// import { Moment } from 'moment';
 export default defineComponent({
   setup() {
-    const handleChange = (value: string) => {
-      console.log(`selected ${value}`);
-    };
-    const handleBlur = () => {
-      console.log("blur");
-    };
-    const handleFocus = () => {
-      console.log("focus");
-    };
+    // const handleChange = (value: string) => {
+    //   console.log(`selected ${value}`);
+    // };
+    // const handleBlur = () => {
+    //   console.log("blur");
+    // };
+    // const handleFocus = () => {
+    //   console.log("focus");
+    // };
     const filterOption = (input: string, option: any) => {
       return option.props.value.toLowerCase().indexOf(input.toLowerCase()) >= 0;
     };
     return {
       value: ref<string | undefined>(undefined),
       filterOption,
-      handleBlur,
-      handleFocus,
-      handleChange,
+    
+      // startdate: ref<Moment>(),
+     
     };
   },
 });
